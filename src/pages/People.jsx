@@ -14,6 +14,7 @@ const People = () => {
       .then((res) => res.json())
       .then((data) => setPeople(data.data))
       .catch((err) => console.log(err));
+      
   };
   useEffect(() => {
     getPeople();
