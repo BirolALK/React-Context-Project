@@ -3,14 +3,17 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { LoginContext } from "../context/LoginContext";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   // const [user, setUser] = useState({ email: "", password: "" });
 
   const {user, setUser} = useContext(LoginContext);
+  const navigate = useNavigate();
    
   const handleSubmit = (e) => {
     e.preventDefault();
+    navigate(-1);
   };
 
   return (
